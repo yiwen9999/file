@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/file?characterEncoding=utf8&useSSL=false
+    username: root
+    password: hex
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  mvc:
+    favicon:
+      enabled: false
+  resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+web:
+  upload-path: /Users/hexuan/Desktop/develop/upload_file_server/
+  zip-file-limit: 200000
+  file-server-uaername: hex
+  file-server-password: hex
+  file-server-path: http://127.0.0.1:8082/
